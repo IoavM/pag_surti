@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './app.css';
+import v1 from './assets/img/v1.jpg';
+import v2 from './assets/img/v2.jpg';
+import v3 from './assets/img/v3.jpg';
+import v4 from './assets/img/v4.jpg';
 
 const LandingPoloDama = () => {
   const [imagenActual, setImagenActual] = useState(0);
@@ -48,12 +52,7 @@ const LandingPoloDama = () => {
     }
   ]);
 
-  const imagenes = [
-    '/img/v1.jpg',
-    '/img/v2.jpg',
-    '/img/v3.jpg',
-    '/img/v4.jpg'
-  ];
+  const imagenes = [v1, v2, v3, v4];
 
   const colores = [
     { nombre: 'Blanco', imagen: '/img/v1.jpg'},
