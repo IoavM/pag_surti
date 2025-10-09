@@ -4,6 +4,9 @@ import v1 from './assets/img/v1.jpg';
 import v2 from './assets/img/v2.jpg';
 import v3 from './assets/img/v3.jpg';
 import v4 from './assets/img/v4.jpg';
+import beigev1 from './assets/img/beigev1.jpg';
+import marfilv1 from './assets/img/marfilv1.jpg';
+import verdev1 from './assets/img/verdev1.jpg';
 
 const LandingPoloDama = () => {
   const [imagenActual, setImagenActual] = useState(0);
@@ -55,10 +58,10 @@ const LandingPoloDama = () => {
   const imagenes = [v1, v2, v3, v4];
 
   const colores = [
-    { nombre: 'Blanco', imagen: '/img/v1.jpg'},
-    { nombre: 'Beige', imagen:  '/img/beigev1.jpg' },
-    { nombre: 'Crema', imagen:  '/img/marfilv1.jpg'},
-    { nombre: 'Verde', imagen:  '/img/verdev1.jpg'}
+    { nombre: 'Blanco', imagen: v1},
+    { nombre: 'Beige', imagen: beigev1 },
+    { nombre: 'Crema', imagen: marfilv1},
+    { nombre: 'Verde', imagen: verdev1}
   ];
 
   const tallas = ['S', 'M', 'L', 'XL'];
