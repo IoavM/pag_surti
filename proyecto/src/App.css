@@ -300,6 +300,7 @@ body {
   height: 48px;
   display: block;
   margin: auto;
+  stroke: #333;
 }
 
 .boton-favorito.activo svg {
