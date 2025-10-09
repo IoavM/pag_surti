@@ -114,6 +114,7 @@ body {
   align-items: center;
   justify-content: center;
   line-height: 1;
+  color: black;
 }
 
 .boton-navegacion:hover {
