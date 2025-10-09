@@ -294,6 +294,58 @@ const LandingPoloDama = () => {
           </button>
         </div>
 
+        {/* Sección TAMBIÉN TE PUEDE INTERESAR */}
+        <section className="seccion-relacionados">
+          <div className="encabezado-relacionados">
+            <p>✦ TAMBIÉN TE PUEDE INTERESAR ✦</p>
+          </div>
+          
+          <div className="contenedor-productos-relacionados">
+            <div className="producto-relacionado">
+              <img src="https://via.placeholder.com/300x400" alt="Jean de dama" />
+              <div className="info-producto-relacionado">
+                <p className="nombre-producto-relacionado">Jean de dama tiro alto ajustada</p>
+                <p className="precio-producto-relacionado">$29.000</p>
+              </div>
+            </div>
+            
+            <div className="producto-relacionado">
+              <img src="https://via.placeholder.com/300x400" alt="Jean de dama" />
+              <div className="info-producto-relacionado">
+                <p className="nombre-producto-relacionado">Jean de dama tiro alto ajustada</p>
+                <p className="precio-producto-relacionado">$29.900</p>
+              </div>
+            </div>
+            
+            <div className="producto-relacionado">
+              <img src="https://via.placeholder.com/300x400" alt="Jean de dama" />
+              <div className="info-producto-relacionado">
+                <p className="nombre-producto-relacionado">Jean de dama tiro alto ajustada</p>
+                <p className="precio-producto-relacionado">$39.900</p>
+              </div>
+            </div>
+            
+            <div className="producto-relacionado">
+              <img src="https://via.placeholder.com/300x400" alt="Jean de dama" />
+              <div className="info-producto-relacionado">
+                <p className="nombre-producto-relacionado">Jean de dama tiro alto ajustada</p>
+                <div className="precios-descuento">
+                  <span className="precio-anterior">$39.990</span>
+                  <span className="precio-actual">$31.992</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="producto-relacionado">
+              <img src="https://via.placeholder.com/300x400" alt="Jean de dama" />
+              <div className="info-producto-relacionado">
+                <p className="nombre-producto-relacionado">Jean de dama tiro alto ajustada</p>
+                <p className="precio-producto-relacionado">$29.900</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div className="lista-comentarios">
           {resenas.map((resena) => (
             <div key={resena.id} className="tarjeta-comentario">

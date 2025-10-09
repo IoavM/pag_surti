@@ -551,6 +551,105 @@ body {
   font-weight: 500;
 }
 
+/* Sección productos relacionados */
+.seccion-relacionados {
+  background-color: #e8e8e8;
+  padding-bottom: 40px;
+}
+
+.encabezado-relacionados {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 30px;
+}
+
+.encabezado-relacionados p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.contenedor-productos-relacionados {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.producto-relacionado {
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.producto-relacionado:hover {
+  transform: translateY(-5px);
+}
+
+.producto-relacionado img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.info-producto-relacionado {
+  padding: 15px;
+}
+
+.nombre-producto-relacionado {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  min-height: 40px;
+}
+
+.precio-producto-relacionado {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e53935;
+}
+
+.precios-descuento {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.precio-anterior {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.precio-actual {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e53935;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .contenedor-productos-relacionados {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .contenedor-productos-relacionados {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor-productos-relacionados {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .contenedor-producto {
@@ -594,3 +693,5 @@ body {
     font-size: 48px;
   }
 }
+
+
