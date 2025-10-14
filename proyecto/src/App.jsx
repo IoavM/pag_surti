@@ -4,9 +4,6 @@ import v1 from './assets/img/v1.jpg';
 import v2 from './assets/img/v2.jpg';
 import v3 from './assets/img/v3.jpg';
 import v4 from './assets/img/v4.jpg';
-import beigev1 from './assets/img/beigev1.jpg';
-import marfilv1 from './assets/img/marfilv1.jpg';
-import verdev1 from './assets/img/verdev1.jpg';
 import imagen_gt from './assets/img/imagen_gt.png';
 
 const LandingPoloDama = () => {
@@ -63,13 +60,19 @@ const LandingPoloDama = () => {
     }
   ]);
 
-  const imagenes = [v1, v2, v3, v4];
+  const imagenes = [
+    'https://surtitodo.co/cdn/shop/files/3342-ropa-de-dama-polo-color-blanco-ref-010040003563_600x600.jpg?v=1758570383', 
+    'https://repositorio.surtitodo.com.co/fotos_vtex2/fotos_vtex/6613-ropa-de-dama-polo-color-blanco-ref-010040003563.jpg',  
+    'https://repositorio.surtitodo.com.co/fotos_vtex2/fotos_vtex/5256-ropa-de-dama-polo-color-blanco-ref-010040003563.jpg', 
+    'https://repositorio.surtitodo.com.co/fotos_vtex2/fotos_vtex/1082-ropa-de-dama-polo-color-blanco-ref-010040003563.jpg',    
+    'https://surtitodo.co/cdn/shop/files/8625-ropa-de-dama-polo-color-blanco-ref-010040003563_800x800.jpg?v=1758570383'
+  ];
 
   const colores = [
-    { nombre: 'Blanco', imagen: v1},
-    { nombre: 'Beige', imagen: beigev1 },
-    { nombre: 'Crema', imagen: marfilv1},
-    { nombre: 'Verde', imagen: verdev1}
+    { nombre: 'Blanco', imagen: 'https://surtitodo.co/cdn/shop/files/3342-ropa-de-dama-polo-color-blanco-ref-010040003563_120x120.jpg?v=1758570383' },
+    { nombre: 'Beige', imagen: 'https://surtitodo.co/cdn/shop/files/2415-ropa-de-dama-polo-color-beige-ref-010040003563_120x120.jpg?v=1758570383' },
+    { nombre: 'Marfil', imagen: 'https://surtitodo.co/cdn/shop/files/9861-ropa-de-dama-polo-color-marfil-ref-010040003563_120x120.jpg?v=1758570396' },
+    { nombre: 'Verde', imagen: 'https://surtitodo.co/cdn/shop/files/4400-ropa-de-dama-polo-color-verde-ref-010040003563_120x120.jpg?v=1758570317' }
   ];
 
   const tallas = ['S', 'M', 'L', 'XL'];
