@@ -18,7 +18,7 @@ body {
 }
 
 .contenedor-principal {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
   background-color: white;
 }
@@ -39,7 +39,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding: 40px;
-  max-width: 1300px;
+  max-width: 1600px;
   margin: 0 auto;
   margin-bottom: 0; 
 }
@@ -414,7 +414,7 @@ body {
 }
 
 .resumen-calificaciones {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto 50px;
   background-color: white;
   padding: 30px;
@@ -447,7 +447,7 @@ body {
 
 /* Formulario de comentarios */
 .formulario-comentario {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto 50px;
   background-color: white;
   padding: 30px;
@@ -515,7 +515,7 @@ body {
 
 /* Lista de comentarios */
 .lista-comentarios {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -604,9 +604,9 @@ body {
 }
 
 .contenedor-productos-relacionados {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
@@ -671,7 +671,7 @@ body {
 }
 
 .contenedor-footer {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
@@ -734,7 +734,7 @@ body {
 
 .payment-image {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
   height: auto;
   display: block;
   margin: 0 auto 15px;
@@ -744,7 +744,7 @@ body {
   font-size: 14px;
   color: #333;
   line-height: 1.6;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -756,7 +756,7 @@ body {
 
 .brands-image {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
   max-height: 93px;
   height: auto;
   display: block;
