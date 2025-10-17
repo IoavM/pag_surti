@@ -1072,6 +1072,7 @@ body {
 
   .producto-relacionado img {
     height: 280px;
+    object-position: center 5%;
   }
 }
 
@@ -1322,6 +1323,7 @@ body {
   .producto-relacionado img {
     height: 250px;
     width: 100%;
+    object-position: center 5%;
   }
 
   .info-producto-relacionado {
@@ -1496,6 +1498,7 @@ body {
 
   .producto-relacionado img {
     height: 220px;
+    object-position: center 5%;
   }
 
   .boton-volver {
@@ -1882,6 +1885,7 @@ body {
   .producto-relacionado img {
     height: 180px;
     width: 100%;
+    object-position: center 5%;
   }
 
   .info-producto-relacionado {
@@ -2135,6 +2139,7 @@ body {
 
   .producto-relacionado img {
     height: 160px;
+    object-position: center 5%;
   }
 
   .info-producto-relacionado {
