@@ -310,6 +310,7 @@ body {
 
 .boton-favorito:hover {
   transform: scale(1.05);
+  border-color: red;
 }
 
 .boton-favorito svg {
