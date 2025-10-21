@@ -1133,7 +1133,7 @@ body {
   }
 
   .producto-relacionado img {
-    height: 280px;
+    height: 350px;
     object-position: center 5%;
   }
 }
@@ -1400,7 +1400,7 @@ body {
   }
   
   .producto-relacionado img {
-    height: 200px;
+    height: 400px;
     width: 100%;
     object-position: center 5%;
   }
@@ -1585,7 +1585,7 @@ body {
   }
   
   .producto-relacionado img {
-    height: 180px;
+    height: 250px;
     object-position: center 5%;
   }
 
