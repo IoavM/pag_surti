@@ -793,7 +793,7 @@ color:white;
   gap: 6px;
   background: none;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
   cursor: pointer;
   text-decoration: underline;
@@ -1012,10 +1012,51 @@ hr {
   margin: 40px 0;
 }
 
+/* Estilos para el carrusel de productos relacionados */
+.carrusel-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding: 0 20px;
+}
 
+.contenedor-productos-relacionados {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.controles-carrusel {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.boton-carrusel {
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  background-color: rgba(255, 255, 255, 0);
+  color: #000;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.boton-carrusel:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
 
 /* ============================================
-   RESPONSIVE COMPLETO - CORREGIDO
+   RESPONSIVE COMPLETO
    ============================================ */
 
 /* Reset global para prevenir desbordamiento */
@@ -1077,12 +1118,16 @@ body {
     padding: 10px;
     width: 100%;
   }
+
+  .contenedor-productos-relacionados {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Tablets pequeñas y móviles grandes (900px) */
 @media (max-width: 900px) {
   .contenedor-productos-relacionados {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     width: 100%;
   }
@@ -1204,7 +1249,7 @@ body {
   }
   
   .imagen-principal {
-    height: 500px;
+    height: auto;
     border-radius: 8px;
     width: 100%;
   }
@@ -1328,15 +1373,35 @@ body {
     font-size: 12px;
   }
 
+  /* CARRUSEL DE PRODUCTOS RELACIONADOS EN MÓVIL */
   .contenedor-productos-relacionados {
-    padding: 0 10px;
+    display: flex;
+    grid-template-columns: none;
+    gap: 0;
+    padding: 0 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     width: 100%;
   }
-
+  
+  .contenedor-productos-relacionados::-webkit-scrollbar {
+    display: none;
+  }
+  
   .producto-relacionado {
-    width: 100%;
+    flex: 0 0 calc(50% - 10px);
+    scroll-snap-align: start;
+    margin-right: 20px;
+    width: auto;
   }
-
+  
+  .producto-relacionado:last-child {
+    margin-right: 0;
+  }
+  
   .producto-relacionado img {
     height: 250px;
     width: 100%;
@@ -1417,7 +1482,6 @@ body {
     font-size: 12px;
     padding: 0 10px;
     width: 100%;
-    padding: 0 6rem;
   }
 
   .brands-footer {
@@ -1428,6 +1492,17 @@ body {
   .brands-image {
     width: 100%;
     max-width: 100%;
+  }
+
+  .controles-carrusel {
+    margin-top: 25px;
+    padding-bottom: 15px;
+  }
+
+  .boton-carrusel {
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
   }
 
   /* GUÍA DE TALLAS - SCROLL EN MÓVIL */
@@ -1509,11 +1584,14 @@ body {
 /* Móviles medianos (600px) */
 @media (max-width: 600px) {
   .contenedor-productos-relacionados {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 0 8px;
+    padding: 0 10px;
   }
-
+  
+  .producto-relacionado {
+    flex: 0 0 calc(50% - 8px);
+    margin-right: 16px;
+  }
+  
   .producto-relacionado img {
     height: 220px;
     object-position: center 5%;
@@ -1534,6 +1612,17 @@ body {
   .estado-stock {
     font-size: 14px;
     margin: 12px 0;
+  }
+
+  .controles-carrusel {
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .boton-carrusel {
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
   }
 }
 
@@ -1582,7 +1671,7 @@ body {
   }
 
   .imagen-principal {
-    height: 400px;
+    height: auto;
     border-radius: 0;
     width: 100%;
   }
@@ -1895,11 +1984,12 @@ body {
     gap: 6px;
     width: 100%;
   }
-
+  
   .producto-relacionado {
-    width: 100%;
+    flex: 0 0 calc(50% - 6px);
+    margin-right: 12px;
   }
-
+  
   .producto-relacionado img {
     height: 180px;
     width: 100%;
@@ -1994,7 +2084,7 @@ body {
 
   .boton-guia-tallas,
   .size-guide-trigger {
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 5px;
     margin-bottom: 10px;
   }
@@ -2003,6 +2093,18 @@ body {
   .size-guide-trigger svg {
     width: 12px;
     height: 12px;
+  }
+
+  .controles-carrusel {
+    margin-top: 15px;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .boton-carrusel {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
   }
 
   /* GUÍA DE TALLAS CON SCROLL - MÓVIL */
@@ -2154,7 +2256,12 @@ body {
     padding: 0 5px;
     gap: 5px;
   }
-
+  
+  .producto-relacionado {
+    flex: 0 0 calc(50% - 4px);
+    margin-right: 8px;
+  }
+  
   .producto-relacionado img {
     height: 160px;
     object-position: center 5%;
@@ -2171,6 +2278,17 @@ body {
 
   .numero-calificacion {
     font-size: 34px;
+  }
+
+  .controles-carrusel {
+    margin-top: 12px;
+    gap: 8px;
+  }
+
+  .boton-carrusel {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
   }
 
   .size-guide-content,

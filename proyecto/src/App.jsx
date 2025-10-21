@@ -21,6 +21,8 @@ const LandingPoloDama = () => {
     especificaciones: false,
     garantia: false
   });
+  const [indiceCarrusel, setIndiceCarrusel] = useState(0);
+  const [transicionActiva, setTransicionActiva] = useState(false);
   const [resenas, setResenas] = useState([
     {
       id: 1,
@@ -66,6 +68,72 @@ const LandingPoloDama = () => {
     'https://repositorio.surtitodo.com.co/fotos_vtex2/fotos_vtex/5256-ropa-de-dama-polo-color-blanco-ref-010040003563.jpg', 
     'https://repositorio.surtitodo.com.co/fotos_vtex2/fotos_vtex/1082-ropa-de-dama-polo-color-blanco-ref-010040003563.jpg',    
     'https://surtitodo.co/cdn/shop/files/8625-ropa-de-dama-polo-color-blanco-ref-010040003563_800x800.jpg?v=1758570383'
+  ];
+
+  const productosRelacionados = [
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/ropa-de-dama-shortcolor-negro-010667006100-v250313-4144.jpg?v=1758313038&width=600",
+      nombre: "Jean de dama tiro alto ajustada",
+      precio: "$29.000"
+    },
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/1973-ropa-de-hombre-polo-color-negro-ref-010040003442.jpg?v=1758298852&width=600",
+      nombre: "Jean de dama tiro alto ajustada",
+      precio: "$29.900"
+    },
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/ropa-de-dama-leggincolor-verde-010653000954-v250529-10034.jpg?v=1758313202&width=600",
+      nombre: "Jean de dama tiro alto ajustada",
+      precio: "$39.900"
+    },
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/6378-ropa-de-dama-blusa-color-marfil-ref-010661003508.jpg?v=1758297661&width=600",
+      nombre: "Jean de dama tiro alto ajustada",
+      precio: "$31.992",
+      precioAnterior: "$39.990"
+    },
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/9639-ropa-de-dama-blusa-color-cafe-ref-0108330rotb5.jpg?v=1758297385&width=600",
+      nombre: "Jean de dama tiro alto ajustada",
+      precio: "$29.900"
+    },
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/3342-ropa-de-dama-polo-color-blanco-ref-010040003563_600x600.jpg?v=1758570383",
+      nombre: "Polo de dama casual verano",
+      precio: "$34.500"
+    },
+    {
+      imagen: "https://repositorio.surtitodo.com.co/fotos_vtex2/fotos_vtex/6613-ropa-de-dama-polo-color-blanco-ref-010040003563.jpg",
+      nombre: "Blusa manga larga elegante",
+      precio: "$45.000",
+      precioAnterior: "$52.000"
+    },
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/2415-ropa-de-dama-polo-color-beige-ref-010040003563_120x120.jpg?v=1758570383",
+      nombre: "Falda midi plisada office",
+      precio: "$38.900"
+    },
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/9861-ropa-de-dama-polo-color-marfil-ref-010040003563_120x120.jpg?v=1758570396",
+      nombre: "Top deportivo algodón",
+      precio: "$22.500"
+    },
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/4400-ropa-de-dama-polo-color-verde-ref-010040003563_120x120.jpg?v=1758570317",
+      nombre: "Vestido casual verano",
+      precio: "$55.000"
+    },
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/ropa-de-dama-shortcolor-negro-010667006100-v250313-4144.jpg?v=1758313038&width=600",
+      nombre: "Short denim premium",
+      precio: "$27.800"
+    },
+    {
+      imagen: "https://surtitodo.co/cdn/shop/files/1973-ropa-de-hombre-polo-color-negro-ref-010040003442.jpg?v=1758298852&width=600",
+      nombre: "Chaqueta jean clásica",
+      precio: "$89.900",
+      precioAnterior: "$99.900"
+    }
   ];
 
   const colores = [
@@ -159,6 +227,34 @@ const LandingPoloDama = () => {
       [seccion]: !prev[seccion]
     }));
   };
+
+  const productosPorSlide = 5;
+  const totalSlides = Math.ceil(productosRelacionados.length / productosPorSlide);
+
+  const siguienteSlide = () => {
+    if (indiceCarrusel < totalSlides - 1 && !transicionActiva) {
+      setTransicionActiva(true);
+      setTimeout(() => {
+        setIndiceCarrusel((prev) => prev + 1);
+        setTransicionActiva(false);
+      }, 300);
+    }
+  };
+
+  const anteriorSlide = () => {
+    if (indiceCarrusel > 0 && !transicionActiva) {
+      setTransicionActiva(true);
+      setTimeout(() => {
+        setIndiceCarrusel((prev) => prev - 1);
+        setTransicionActiva(false);
+      }, 300);
+    }
+  };
+
+  const productosVisibles = productosRelacionados.slice(
+    indiceCarrusel * productosPorSlide,
+    (indiceCarrusel + 1) * productosPorSlide
+  );
 
   return (
     <div className="contenedor-principal">
@@ -472,48 +568,41 @@ const LandingPoloDama = () => {
           <p>✦ TAMBIÉN TE PUEDE INTERESAR ✦</p>
         </div>
         
-        <div className="contenedor-productos-relacionados">
-          <div className="producto-relacionado">
-            <img src="https://surtitodo.co/cdn/shop/files/ropa-de-dama-shortcolor-negro-010667006100-v250313-4144.jpg?v=1758313038&width=600" alt="Jean de dama" />
-            <div className="info-producto-relacionado">
-              <p className="nombre-producto-relacionado">Jean de dama tiro alto ajustada</p>
-              <p className="precio-producto-relacionado">$29.000</p>
-            </div>
-          </div>
-          
-          <div className="producto-relacionado">
-            <img src="https://surtitodo.co/cdn/shop/files/1973-ropa-de-hombre-polo-color-negro-ref-010040003442.jpg?v=1758298852&width=600" alt="Jean de dama" />
-            <div className="info-producto-relacionado">
-              <p className="nombre-producto-relacionado">Jean de dama tiro alto ajustada</p>
-              <p className="precio-producto-relacionado">$29.900</p>
-            </div>
-          </div>
-          
-          <div className="producto-relacionado">
-            <img src="https://surtitodo.co/cdn/shop/files/ropa-de-dama-leggincolor-verde-010653000954-v250529-10034.jpg?v=1758313202&width=600" alt="Jean de dama" />
-            <div className="info-producto-relacionado">
-              <p className="nombre-producto-relacionado">Jean de dama tiro alto ajustada</p>
-              <p className="precio-producto-relacionado">$39.900</p>
-            </div>
-          </div>
-          
-          <div className="producto-relacionado">
-            <img src="https://surtitodo.co/cdn/shop/files/6378-ropa-de-dama-blusa-color-marfil-ref-010661003508.jpg?v=1758297661&width=600" alt="Jean de dama" />
-            <div className="info-producto-relacionado">
-              <p className="nombre-producto-relacionado">Jean de dama tiro alto ajustada</p>
-              <div className="precios-descuento">
-                <span className="precio-anterior">$39.990</span>
-                <span className="precio-actual">$31.992</span>
+        <div className="carrusel-wrapper">
+          <div className={`contenedor-productos-relacionados ${transicionActiva ? 'transicionando' : ''}`}>
+            {productosVisibles.map((producto, index) => (
+              <div key={index} className="producto-relacionado">
+                <img src={producto.imagen} alt={producto.nombre} />
+                <div className="info-producto-relacionado">
+                  <p className="nombre-producto-relacionado">{producto.nombre}</p>
+                  {producto.precioAnterior ? (
+                    <div className="precios-descuento">
+                      <span className="precio-anterior">{producto.precioAnterior}</span>
+                      <span className="precio-actual">{producto.precio}</span>
+                    </div>
+                  ) : (
+                    <p className="precio-producto-relacionado">{producto.precio}</p>
+                  )}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
           
-          <div className="producto-relacionado">
-            <img src="https://surtitodo.co/cdn/shop/files/9639-ropa-de-dama-blusa-color-cafe-ref-0108330rotb5.jpg?v=1758297385&width=600" alt="Jean de dama" />
-            <div className="info-producto-relacionado">
-              <p className="nombre-producto-relacionado">Jean de dama tiro alto ajustada</p>
-              <p className="precio-producto-relacionado">$29.900</p>
-            </div>
+          <div className="controles-carrusel">
+            <button 
+              className="boton-carrusel" 
+              onClick={anteriorSlide}
+              disabled={indiceCarrusel === 0 || transicionActiva}
+            >
+              ‹
+            </button>
+            <button 
+              className="boton-carrusel" 
+              onClick={siguienteSlide}
+              disabled={indiceCarrusel === totalSlides - 1 || transicionActiva}
+            >
+              ›
+            </button>
           </div>
         </div>
       </section>
