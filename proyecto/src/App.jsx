@@ -109,31 +109,23 @@ const LandingPoloDama = () => {
       precioAnterior: "$52.000"
     },
     {
-      imagen: "https://surtitodo.co/cdn/shop/files/2415-ropa-de-dama-polo-color-beige-ref-010040003563_120x120.jpg?v=1758570383",
-      nombre: "Falda midi plisada office",
+      imagen: "https://repositorio.surtitodo.com.co/fotos_vtex2/fotos_vtex/9861-ropa-de-dama-polo-color-marfil-ref-010040003563.jpg",
+      nombre: "Polo dama",
       precio: "$38.900"
     },
     {
-      imagen: "https://surtitodo.co/cdn/shop/files/9861-ropa-de-dama-polo-color-marfil-ref-010040003563_120x120.jpg?v=1758570396",
-      nombre: "Top deportivo algodón",
+      imagen: "https://repositorio.surtitodo.com.co/fotos_vtex2/fotos_vtex/9339-ropa-de-dama-vestido-color-arena-negro-ref-020053411240.jpg",
+      nombre: "Vestido de dama casual manga sisa",
       precio: "$22.500"
     },
     {
-      imagen: "https://surtitodo.co/cdn/shop/files/4400-ropa-de-dama-polo-color-verde-ref-010040003563_120x120.jpg?v=1758570317",
-      nombre: "Vestido casual verano",
+      imagen: "https://repositorio.surtitodo.com.co/fotos_vtex2/fotos_vtex/2957-ropa-de-dama-vestido-color-negro-ref-020053041370.jpg",
+      nombre: "Vestido de dama elegante cuello camisero",
       precio: "$55.000"
     },
-    {
-      imagen: "https://surtitodo.co/cdn/shop/files/ropa-de-dama-shortcolor-negro-010667006100-v250313-4144.jpg?v=1758313038&width=600",
-      nombre: "Short denim premium",
-      precio: "$27.800"
-    },
-    {
-      imagen: "https://surtitodo.co/cdn/shop/files/1973-ropa-de-hombre-polo-color-negro-ref-010040003442.jpg?v=1758298852&width=600",
-      nombre: "Chaqueta jean clásica",
-      precio: "$89.900",
-      precioAnterior: "$99.900"
-    }
+
+      
+
   ];
 
   const colores = [

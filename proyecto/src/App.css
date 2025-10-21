@@ -1373,11 +1373,11 @@ body {
     font-size: 12px;
   }
 
-  /* CARRUSEL DE PRODUCTOS RELACIONADOS EN MÓVIL */
+  /* CARRUSEL RESPONSIVE - MOSTRAR 2 PRODUCTOS A LA VEZ */
   .contenedor-productos-relacionados {
     display: flex;
     grid-template-columns: none;
-    gap: 0;
+    gap: 12px;
     padding: 0 15px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -1385,6 +1385,7 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     width: 100%;
+    flex-wrap: nowrap;
   }
   
   .contenedor-productos-relacionados::-webkit-scrollbar {
@@ -1392,18 +1393,14 @@ body {
   }
   
   .producto-relacionado {
-    flex: 0 0 calc(50% - 10px);
+    flex: 0 0 auto;
+    width: calc(50% - 6px); /* 2 PRODUCTOS POR VISTA */
+    min-width: calc(50% - 6px);
     scroll-snap-align: start;
-    margin-right: 20px;
-    width: auto;
-  }
-  
-  .producto-relacionado:last-child {
-    margin-right: 0;
   }
   
   .producto-relacionado img {
-    height: 250px;
+    height: 200px;
     width: 100%;
     object-position: center 5%;
   }
@@ -1494,15 +1491,9 @@ body {
     max-width: 100%;
   }
 
+  /* ELIMINAR CONTROLES DE CARRUSEL EN MÓVIL */
   .controles-carrusel {
-    margin-top: 25px;
-    padding-bottom: 15px;
-  }
-
-  .boton-carrusel {
-    width: 35px;
-    height: 35px;
-    font-size: 24px;
+    display: none;
   }
 
   /* GUÍA DE TALLAS - SCROLL EN MÓVIL */
@@ -1585,15 +1576,16 @@ body {
 @media (max-width: 600px) {
   .contenedor-productos-relacionados {
     padding: 0 10px;
+    gap: 10px;
   }
   
   .producto-relacionado {
-    flex: 0 0 calc(50% - 8px);
-    margin-right: 16px;
+    width: calc(50% - 5px);
+    min-width: calc(50% - 5px);
   }
   
   .producto-relacionado img {
-    height: 220px;
+    height: 180px;
     object-position: center 5%;
   }
 
@@ -1613,20 +1605,9 @@ body {
     font-size: 14px;
     margin: 12px 0;
   }
-
-  .controles-carrusel {
-    margin-top: 20px;
-    gap: 12px;
-  }
-
-  .boton-carrusel {
-    width: 32px;
-    height: 32px;
-    font-size: 22px;
-  }
 }
 
-/* iPhone 16 Pro Max y móviles similares (480px) */
+/* Móviles pequeños (480px) */
 @media (max-width: 480px) {
   .encabezado {
     font-size: 10px;
@@ -1981,17 +1962,17 @@ body {
 
   .contenedor-productos-relacionados {
     padding: 0 8px;
-    gap: 6px;
+    gap: 8px;
     width: 100%;
   }
   
   .producto-relacionado {
-    flex: 0 0 calc(50% - 6px);
-    margin-right: 12px;
+    width: calc(50% - 4px);
+    min-width: calc(50% - 4px);
   }
   
   .producto-relacionado img {
-    height: 180px;
+    height: 160px;
     width: 100%;
     object-position: center 5%;
   }
@@ -2093,18 +2074,6 @@ body {
   .size-guide-trigger svg {
     width: 12px;
     height: 12px;
-  }
-
-  .controles-carrusel {
-    margin-top: 15px;
-    gap: 10px;
-    padding-bottom: 10px;
-  }
-
-  .boton-carrusel {
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
   }
 
   /* GUÍA DE TALLAS CON SCROLL - MÓVIL */
@@ -2258,12 +2227,12 @@ body {
   }
   
   .producto-relacionado {
-    flex: 0 0 calc(50% - 4px);
-    margin-right: 8px;
+    width: calc(50% - 3px);
+    min-width: calc(50% - 3px);
   }
   
   .producto-relacionado img {
-    height: 160px;
+    height: 150px;
     object-position: center 5%;
   }
 
@@ -2278,17 +2247,6 @@ body {
 
   .numero-calificacion {
     font-size: 34px;
-  }
-
-  .controles-carrusel {
-    margin-top: 12px;
-    gap: 8px;
-  }
-
-  .boton-carrusel {
-    width: 28px;
-    height: 28px;
-    font-size: 18px;
   }
 
   .size-guide-content,
