@@ -596,7 +596,7 @@ body {
 
 /* Sección productos relacionados */
 .seccion-relacionados {
-  background-color: #e8e8e8;
+  background-color: #fbf8f8;
   padding-bottom: 40px;
 }
 
@@ -644,6 +644,7 @@ body {
 
 .info-producto-relacionado {
   padding: 15px;
+  background-color: #ede5e5
 }
 
 .nombre-producto-relacionado {
@@ -1032,7 +1033,6 @@ hr {
   justify-content: center;
   gap: 15px;
   margin-top: 30px;
-  padding-bottom: 20px;
 }
 
 .boton-carrusel {
